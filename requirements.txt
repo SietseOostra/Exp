@@ -2,3 +2,4 @@
 -r requirements_base.txt
 psycopg2==2.8.6
 asgiref==3.1.2
+msgpack==1.0
