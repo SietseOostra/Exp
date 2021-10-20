@@ -1,0 +1,46 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+    Instructions (Page 2/12)
+{% endblock %}
+
+{% block content %}
+
+<div align="center">
+    <img width="90%" src="{% static "publictax/image_a.jpg" %}"/>
+</div>
+
+<div class="card card-body bg-light instructions">
+    <ul>
+        <li>
+            You are a citizen of Country A, and we ask you to evaluate whether Telecom Co. is paying its fair share of taxes.
+        </li>
+        <li>
+            Telecom Co. is a publicly listed company in the telecommunications industry and is headquartered in Country A.
+        </li>
+        <li>
+            Country A has a tax rate of 24% for publicly listed companies such as Telecom Co.
+        </li>
+        <li>
+            A tax rate of 24% implies that companies pay 24% of their profit before taxes to the tax authorities of Country A.
+        </li>
+    </ul>
+</div>
+<br>
+    <p>
+        <b>Please evaluate the following statements.</b>
+    </p>
+    <p>
+        Telecom Co. is headquartered in Country A.
+        {% formfield player.Instr1 label=None %}
+    </p>
+    <p>
+        A tax rate of 24% means that companies pay 24% of profit before taxes.
+        {% formfield player.Instr2 label=None %}
+    </p>
+
+<br>
+{% next_button %}
+
+{% endblock %}

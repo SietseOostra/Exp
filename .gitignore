@@ -1,0 +1,10 @@
+venv
+./db.sqlite3
+.idea
+*~
+*.sqlite3
+_bots*s
+__pycache__/
+*.py[cod]
+.DS_Store
+*.otreezip

@@ -1,0 +1,38 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+    Before you begin ... (Page 1/12)
+{% endblock %}
+{% block content %}
+<div class="card card-body bg-light instructions">
+    <ul>
+        <li>
+            Please read the instructions carefully and be aware that you cannot go back to previous screens.
+        </li>
+        <li>
+            This study is anonymous, and your data will only be used for research purposes.
+        </li>
+        <li>
+            There is no psychological discomfort, no physical discomfort, nor any deception in this study.
+        </li>
+        <li>
+            Participation is completely voluntary and you can quit at any time.
+        </li>
+    </ul>
+
+    <p>Thank you,</p>
+
+    <p>The research team</p>
+    </div>
+<br>
+
+{% formfield player.captcha %}
+
+<br>
+{% next_button %}
+{% endblock %}
+
+{% block scripts %}
+
+{% endblock %}
