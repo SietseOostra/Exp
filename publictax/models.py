@@ -148,7 +148,7 @@ class Player(BasePlayer):
     )
 
     FL5 = models.IntegerField(
-        label = "Suppose that in the year 2020, your income has doubled, and prices of all goods have doubled too. In 2020, how much will you be able to buy with your income?",
+        label = "Suppose that in the year 2030, your income has doubled, and prices of all goods have doubled too. In 2030, how much will you be able to buy with your income?",
         choices = [
             [1, 'More than today'],
             [2, 'Exactly the same'],
