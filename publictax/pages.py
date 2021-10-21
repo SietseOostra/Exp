@@ -115,7 +115,7 @@ class Thank(Page):
 
 page_sequence = [
     Intro,
-    Financial
+    Financial,
     Info_1,
     Info_2,
     Info_3,
