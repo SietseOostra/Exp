@@ -13,6 +13,16 @@ class Intro(Page):
         frm.fields['captcha'] = ReCaptchaField(label='')
         return frm
 
+class Financial(Page):
+    form_model = 'player'
+    form_fields = [
+        'FL1',
+        'FL2',
+        'FL3',
+        'FL4',
+        'FL5'
+    ]
+
 class Info_1(Page):
     form_model = 'player'
     form_fields = ['Instr1', 'Instr2']
@@ -105,6 +115,7 @@ class Thank(Page):
 
 page_sequence = [
     Intro,
+    Financial
     Info_1,
     Info_2,
     Info_3,
