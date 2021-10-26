@@ -7,12 +7,12 @@ from os import environ
 
 mturk_hit_settings = {
     'keywords': ['financial', 'tax', 'study', 'academic'],
-    'title': 'Assess Corporate Tax Strategies ($0.9 for about 6 min)',
-    'description': 'Assess corporate tax strategies of companies for $0.9 for about 6 minutes. FINANCIAL LITERACY REQUIRED',
+    'title': 'Assess Corporate Tax Strategies ($0.82 for about 5.5 min)',
+    'description': 'Assess corporate tax strategies of companies for $0.83 for about 5.5 minutes. FINANCIAL LITERACY REQUIRED',
     'frame_height': 500,
     #'preview_template': 'global/MTurkPreview.html',
     'template': 'global/mturk_template.html',
-    'minutes_allotted_per_assignment': 45,
+    'minutes_allotted_per_assignment': 30,
     'expiration_hours': 7*24, # 7 days
     #'grant_qualification_id': 'YOUR_QUALIFICATION_ID_HERE',# to prevent retakes
     'qualification_requirements': [
@@ -44,7 +44,7 @@ mturk_hit_settings = {
 
 SESSION_CONFIG_DEFAULTS = {
     'real_world_currency_per_point': 0.00,
-    'participation_fee': 0.9,
+    'participation_fee': 0.83,
     'doc': "",
     'mturk_hit_settings': mturk_hit_settings,
 }
