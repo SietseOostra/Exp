@@ -12,7 +12,7 @@ mturk_hit_settings = {
     'frame_height': 500,
     #'preview_template': 'global/MTurkPreview.html',
     'template': 'global/mturk_template.html',
-    'minutes_allotted_per_assignment': 30,
+    'minutes_allotted_per_assignment': 20,
     'expiration_hours': 7*24, # 7 days
     #'grant_qualification_id': 'YOUR_QUALIFICATION_ID_HERE',# to prevent retakes
     'qualification_requirements': [
