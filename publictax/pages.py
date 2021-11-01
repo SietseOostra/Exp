@@ -45,7 +45,7 @@ class Financial5(Page):
     form_model = 'player'
     form_fields = ['FL5']
     
-     def is_displayed(self):
+    def is_displayed(self):
         player = self.player
         return player.FL4 == 1
     
