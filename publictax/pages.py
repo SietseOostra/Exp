@@ -16,44 +16,82 @@ class Financial2(Page):
         player = self.player
         return player.FL1 == 1
     
+class Financial3(Page):
+    form_model = 'player'
+    form_fields = ['FL3']
+    
+    def is_displayed(self):
+        player = self.player
+        return player.FL2 == 1
+
+class Financial4(Page):
+    form_model = 'player'
+    form_fields = ['FL4']
+    
+    def is_displayed(self):
+        player = self.player
+        return player.FL3 == 3
+
+class Financial5(Page):
+    form_model = 'player'
+    form_fields = ['FL5']
+    
+     def is_displayed(self):
+        player = self.player
+        return player.FL4 == 1
+    
 class Intro(Page):
     form_model = 'player'
     form_fields = ['captcha']
+    
+     def is_displayed(self):
+        player = self.player
+        return player.FL5 == 2
 
     def get_form(self, data=None, files=None, **kwargs):
         frm = super().get_form(data, files, **kwargs)
         frm.fields['captcha'] = ReCaptchaField(label='')
         return frm
 
-class Financial(Page):
-    form_model = 'player'
-    form_fields = [
-        'FL1',
-        'FL2',
-        'FL3',
-        'FL4',
-        'FL5'
-    ]
-
 class Info_1(Page):
     form_model = 'player'
     form_fields = ['Instr1', 'Instr2']
+    
+    def is_displayed(self):
+        player = self.player
+        return player.FL5 == 2
 
 class Info_2(Page):
     form_model = 'player'
     form_fields = ['Instr3']
+    
+    def is_displayed(self):
+        player = self.player
+        return player.FL5 == 2
 
 class Info_3(Page):
     form_model = 'player'
     form_fields = ['Instr4', 'Instr5']
+    
+    def is_displayed(self):
+        player = self.player
+        return player.FL5 == 2
 
 class Important(Page):
     form_model = 'player'
     form_fields = ['accept_important']
+    
+    def is_displayed(self):
+        player = self.player
+        return player.FL5 == 2
 
 class E_judge(Page):
     form_model = 'player'
     form_fields = ['timer_id', 'alotax', 'check_alotax']
+    
+    def is_displayed(self):
+        player = self.player
+        return player.FL5 == 2
 
     def error_message(self, value):
         #if self.group.r == None:
@@ -63,6 +101,10 @@ class E_judge(Page):
 class I_judge(Page):
     form_model = 'player'
     form_fields = ['i_judge_1', 'i_judge_2', 'i_judge_3', 'check_i_judge_1', 'check_i_judge_2', 'check_i_judge_3']
+    
+    def is_displayed(self):
+        player = self.player
+        return player.FL5 == 2
 
     def error_message(self, value):
         #if self.group.r == None:
@@ -79,6 +121,10 @@ class Peq1(Page):
         'taxmanagement_check',
         'australia_check'
     ]
+    
+    def is_displayed(self):
+        player = self.player
+        return player.FL5 == 2
 
     def get_form_fields(self):
         fields = self.form_fields
@@ -92,6 +138,10 @@ class Peq2(Page):
         'fin_own',
         'tax_exp'
     ]
+    
+    def is_displayed(self):
+        player = self.player
+        return player.FL5 == 2
 
     def get_form_fields(self):
         fields = self.form_fields
@@ -107,6 +157,10 @@ class Peq3(Page):
         'english',
         'attention_1'
     ]
+    
+    def is_displayed(self):
+        player = self.player
+        return player.FL5 == 2
 
     def get_form_fields(self):
         fields = self.form_fields
@@ -120,14 +174,26 @@ class M(Page):
         'mturk_feedback',
         'mturk_motivation'
     ]
+    
+    def is_displayed(self):
+        player = self.player
+        return player.FL5 == 2
 
 class Thank(Page):
     form_model = 'player'
     form_fields = ['completion_code']
+    
+    def is_displayed(self):
+        player = self.player
+        return player.FL5 == 2
 
 page_sequence = [
+    Financial1,
+    Financial2,
+    Financial3,
+    Financial4,
+    Financial5,
     Intro,
-    Financial,
     Info_1,
     Info_2,
     Info_3,
