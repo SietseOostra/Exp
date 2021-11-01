@@ -4,6 +4,15 @@ from .models import Constants
 import random
 from captcha.fields import ReCaptchaField
 
+class Intro(Page):
+    form_model = 'player'
+    form_fields = ['captcha']
+    
+    def get_form(self, data=None, files=None, **kwargs):
+        frm = super().get_form(data, files, **kwargs)
+        frm.fields['captcha'] = ReCaptchaField(label='')
+        return frm
+
 class Financial1(Page):
     form_model = 'player'
     form_fields = ['FL1']
@@ -40,19 +49,6 @@ class Financial5(Page):
         player = self.player
         return player.FL4 == 1
     
-class Intro(Page):
-    form_model = 'player'
-    form_fields = ['captcha']
-    
-     def is_displayed(self):
-        player = self.player
-        return player.FL5 == 2
-
-    def get_form(self, data=None, files=None, **kwargs):
-        frm = super().get_form(data, files, **kwargs)
-        frm.fields['captcha'] = ReCaptchaField(label='')
-        return frm
-
 class Info_1(Page):
     form_model = 'player'
     form_fields = ['Instr1', 'Instr2']
@@ -188,12 +184,12 @@ class Thank(Page):
         return player.FL5 == 2
 
 page_sequence = [
+    Intro,
     Financial1,
     Financial2,
     Financial3,
     Financial4,
     Financial5,
-    Intro,
     Info_1,
     Info_2,
     Info_3,
