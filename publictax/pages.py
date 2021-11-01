@@ -4,6 +4,18 @@ from .models import Constants
 import random
 from captcha.fields import ReCaptchaField
 
+class Financial1(Page):
+    form_model = 'player'
+    form_fields = ['FL1']
+    
+class Financial2(Page):
+    form_model = 'player'
+    form_fields = ['FL2']
+    
+    def is_displayed(self):
+        player = self.player
+        return player.FL1 == 1
+    
 class Intro(Page):
     form_model = 'player'
     form_fields = ['captcha']
