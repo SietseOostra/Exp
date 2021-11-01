@@ -1,0 +1,22 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+    Financial Literacy Test (Page 4/16)
+{% endblock %}
+
+{% block content %}
+
+    <div class="card card-body bg-light instructions" style="text-align:center">
+        This is question 3 of the Financial Literacy Test.
+        Please answer the following question to the best of your ability.<br>
+        If you answer this question wrongly, you will be taken to the end of the experiment. <br>
+        If so, you will NOT be compensated. <br>
+        Thank you! <br>
+    </div>
+<hr>
+{% formfields %}
+<hr>
+{% next_button %}
+
+{% endblock %}
