@@ -8,7 +8,7 @@ from os import environ
 mturk_hit_settings = {
     'keywords': ['financial', 'tax', 'study', 'academic'],
     'title': 'Assess Corporate Tax Strategies ($0.82 for about 5.5 min)',
-    'description': 'Assess corporate tax strategies of companies for $0.83 for about 5.5 minutes. FINANCIAL LITERACY REQUIRED',
+    'description': 'Assess corporate tax strategies of companies for $0.82 for about 5.5 minutes. FINANCIAL LITERACY REQUIRED',
     'frame_height': 500,
     #'preview_template': 'global/MTurkPreview.html',
     'template': 'global/mturk_template.html',
@@ -44,7 +44,7 @@ mturk_hit_settings = {
 
 SESSION_CONFIG_DEFAULTS = {
     'real_world_currency_per_point': 0.00,
-    'participation_fee': 0.83,
+    'participation_fee': 0.82,
     'doc': "",
     'mturk_hit_settings': mturk_hit_settings,
 }
